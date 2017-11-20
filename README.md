@@ -1,12 +1,13 @@
 # ReactNative 入门文档
 > 目录大纲
+
 ## React 简介
     1.React基本语法用法
     2.React-redux用法
 
-## Native 简介
-    1.Android
-    2.iOS
+## 同行对比
+    1.Cordova PK ReactNative
+    2.Weex PK ReactNative
 
 ## ReactNative 简介 
     1.ReactNative 环境搭建
@@ -112,7 +113,7 @@
         - 负责管理数据和业务逻辑，不负责 UI 的呈现
         - 带有内部状态
         - 使用 Redux 的 API
-    #### React-Redux 规定，所有的 UI 组件都由用户提供，容器组件则是由 React-Redux 自动生成。也就是说，用户负责视觉层，状态管理则是全部交给它。
+- React-Redux 规定，所有的 UI 组件都由用户提供，容器组件则是由 React-Redux 自动生成。也就是说，用户负责视觉层，状态管理则是全部交给它。
 1. Connect()
     ```jsx
     import { connect } from 'react-redux' 
@@ -307,3 +308,14 @@
     }
   ```
 -------------------
+
+> 同行对比
+- 优势:
+    - Cordova 为代表的 Hybrid 是基于 WebView 的，在 Android 上的性能缺陷非常明显; 而 RN 是利用 JSCore 转化成 Native 运行的，性能相对好很多
+    - Weex 文档少, 活跃度没有ReactNative高, 疑似阿里的KPI项目, 已经很久没有更新版本了, 而且开发中遇到的坑比较多, 同一份代码在安卓和iOS上运行差异比较大; 而RN自2015至今有近3年的社区贡献, 开发过程中坑比较少, 文档比较齐全, 社区活跃
+- 劣势: 
+    - Weex使用一套Vue代码就可以解决Native端, Web端的项目开发, 而目前RN的代码只能运行在Native端, 在Chrome浏览器只能调试
+    - 相对于Weex而言, Vue的语法相对简单, React使用jsx的语法糖, 比较不容易上手
+- 混合开发通病:
+    - 由于经常需要开发与原生交互的组件或者API, 往往开发人员需要熟悉或了解原生iOS或Android的开发
+    - RN 需要从服务器下载 JS bundle，然后在本地转化成 Native code 运行的，所以在第一次打开 App 时需要花费一些时间进行下载和刷新。一般行业解决方案就是固定不变的依赖包缓存在原生中, 业务逻辑从服务器下载后转换, 过程中添加 Lanch Screen 来过度
