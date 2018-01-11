@@ -1,8 +1,7 @@
 import * as types from 'constants/ActionTypes';
 import { List, Map } from 'immutable';
 import { combineReducers } from 'redux';
-
-function todoList(state = List(), action) {
+const todoList = (state = List(), action) => {
   switch (action.type) {
     case types.ADD_TODO:
       return state.push(Map({
@@ -29,10 +28,10 @@ function todoList(state = List(), action) {
     default:
       return state;
   }
-}
+};
 
 
-function activeFilter(state = 'all', action) {
+const activeFilter = (state = 'all', action) => {
   switch (action.type) {
     case types.CHANGE_FILTER:
       console.info('%cFilter changed: ' + action.filter.toUpperCase(), 'color:red; font-weight:bold;');
@@ -41,7 +40,7 @@ function activeFilter(state = 'all', action) {
     default:
       return state;
   }
-}
+};
 
 
 export default combineReducers({
