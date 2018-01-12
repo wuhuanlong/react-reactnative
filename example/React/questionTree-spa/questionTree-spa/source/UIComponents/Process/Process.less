@@ -1,0 +1,50 @@
+@import '../../resource/style/variable.less';
+
+.gt-process-container {
+  width: 100%;
+  height: @progressHeight / 75 * 1rem;
+  background-color: @progressBackground;
+}
+
+.gt-process-active {
+  height: 100%;
+  background-color: @progressActiveBackground;
+  transition: all 300ms ease-in;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (orientation: portrait) {
+  /*竖屏 css*/
+  .gt-process-container {
+    width: 100%;
+    height: @progressHeight / 75 * 1rem;
+    background-color: @progressBackground;
+    transition: all 300ms ease-in;
+    [data-dpr="2"] & {
+      height: @progressHeight * 1px;
+    }
+    [data-dpr="2.5"] & {
+      height: (@progressHeight * 2.5 / 2) * 1px;
+    }
+    [data-dpr="2.75"] & {
+      height: (@progressHeight * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+      height: (@progressHeight / 2 * 3) * 1px;
+    }
+    [data-dpr="4"] & {
+      height: @progressHeight * 2px;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) {
+  /*横屏 css*/
+  .gt-process-container {
+    width: 100%;
+    height: @progressHeight / 75 * 1rem;
+    background-color: @progressBackground;
+    transition: all 300ms ease-in;
+  }
+}

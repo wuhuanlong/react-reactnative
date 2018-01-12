@@ -1,0 +1,40 @@
+@import '../../resource/style/variable.less';
+
+.align-right {
+  text-align: right;
+}
+.aligh-center{
+  text-align: center;
+}  
+.gt-unVisable {
+  visibility: hidden;
+}  
+
+.gt-answer-answer {
+  font-size: @baseFontSize;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;  
+  font-size: 0.4rem; 
+  padding: 0.37333333rem 0.26666667rem;
+  width: 3.4rem;
+  text-align: center;
+  background: white;
+  margin: 15px; 
+  display: inline-block; 
+  p {
+    margin-bottom: 25px;
+    color: @specFontColor;
+    text-align: left;
+  }
+  img {
+    margin: 10px;
+    height: 1.2rem;
+  }
+  &:active {
+    background-color: @activeBackgroundColor;
+  }
+  &.selected {
+    background-color: @activeBackgroundColor;
+  }
+}  

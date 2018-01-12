@@ -1,0 +1,51 @@
+@import '../../resource/style/variable.less';
+.gt-answer-text {
+    background: white;
+    border-radius: 20px;
+    color: @specFontColor;
+    font-size: @baseFontSize;
+    max-width: 89.85%;
+    min-width: 70%;
+    display: inline-block;
+    text-align: left;
+    box-shadow: 0 2px 2px #d8d8d8;
+    img.selected{
+        right: 50px;
+        width: @baseFontSize
+    }
+}
+.answer{
+    border-bottom: 1px solid @borderColor;
+    padding: 25/75rem;
+    border-bottom: 1/75rem solid @borderColor;
+    &:last-child{
+        border-bottom: 0 solid transparent;
+    }
+    &:active{
+        background-color: @activeBackgroundColor;
+    }
+    p:first-child{
+        padding-right: 10px;
+    }
+}
+
+.gt-sure-btn{
+    font-size: @baseFontSize;
+    min-width: 25%;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 2px 2px #d8d8d8;
+    font-weight: normal;
+    padding: 20/75rem;
+    background-color: #10aeff;
+    color: white;
+    margin-top: 28px;
+    border-radius: 12px;
+    transition: all .5s;
+    &.gt-show{
+        opacity: 1
+    }
+    &.gt-hide{
+        opacity: 0
+    }
+}

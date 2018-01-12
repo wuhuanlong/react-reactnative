@@ -1,0 +1,162 @@
+@import '../../resource/style/variable.less';
+
+@media screen and (orientation: portrait) {
+  /*竖屏 css*/
+  .gt-headerBar-header-container {
+    width: 100%;
+    height: 88 / 75 * 1rem;
+    display: flex;
+    text-align: center;
+    line-height: 88 / 75 * 1rem;
+    background-color: white;
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+  }
+
+  .gt-headerBar-left-container {
+    flex: 1;
+  }
+
+  .gt-headerBar-right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+  } 
+
+  .gt-headerBar-header-title {
+    flex: 2;
+    line-height: 88 / 75 * 1rem;
+    font-size: @titleFontSize;
+    font-family: 黑体;
+    [data-dpr="2"] & {
+      font-size: @titleFontSize_1 * 1px;
+    }
+    [data-dpr="2.5"] & {
+      font-size: (@titleFontSize_1 * 2.5 / 2) * 1px;
+    }
+    [data-dpr="2.75"] & {
+      font-size: (@titleFontSize_1 * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+      font-size: (@titleFontSize_1 / 2 * 3) * 1px;
+    }
+    [data-dpr="4"] & {
+      font-size: @titleFontSize_1 * 2px;
+    }
+  }
+
+  .gt-changeUser-backIcon {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: @baseFontSize;
+    [data-dpr="2"] & {
+      font-size: @baseFontSize_1 * 1px;
+    }
+    [data-dpr="2.5"] & {
+      font-size: (@baseFontSize_1 * 2.5 / 2) * 1px;
+    }
+    [data-dpr="2.75"] & {
+      font-size: (@baseFontSize_1 * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+      font-size: (@baseFontSize_1 / 2 * 3) * 1px;
+    }
+    [data-dpr="4"] & {
+      font-size: @baseFontSize_1 * 2px;
+    }
+  } 
+
+  .gt-rightIcon{
+    color: @specFontColor;
+    font-size: @baseFontSize;
+    font-family: 黑体;
+    [data-dpr="2"] & {
+      font-size: @baseFontSize_1 * 1px;
+    }
+    [data-dpr="2.5"] & {
+      font-size: (@baseFontSize_1 * 2.5 / 2) * 1px;
+    }
+    [data-dpr="2.75"] & {
+      font-size: (@baseFontSize_1 * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+      font-size: (@baseFontSize_1 / 2 * 3) * 1px;
+    }
+    [data-dpr="4"] & {
+      font-size: @baseFontSize_1 * 2px;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) {
+  /*横屏 css*/
+  .gt-headerBar-header-container {
+    width: 100%;
+    height: 66 / 75 * 1rem;
+    display: flex;
+    text-align: center;
+    line-height: 66 / 75 * 1rem;
+    background-color: white;
+  }
+
+  .gt-headerBar-left-container {
+    flex: 1;
+  }
+
+  .gt-headerBar-right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .gt-headerBar-header-title {
+    flex: 2;
+    line-height: 66 / 75 * 1rem;
+    font-size: @titleFontSize;
+    font-family: 黑体;
+    [data-dpr="2"] & {
+      font-size: @titleFontSize_1 * 1px;
+    }
+    [data-dpr="2.5"] & {
+      font-size: (@titleFontSize_1 * 2.5 / 2) * 1px;
+    }
+    [data-dpr="2.75"] & {
+      font-size: (@titleFontSize_1 * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+      font-size: (@titleFontSize_1 / 2 * 3) * 1px;
+    }
+    [data-dpr="4"] & {
+      font-size: @titleFontSize_1 * 2px;
+    }
+  }
+
+  .gt-changeUser-backIcon {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: @baseFontSize;
+    [data-dpr="2"] & {
+      font-size: @baseFontSize_1 * 1px;
+    }
+    [data-dpr="2.5"] & {
+      font-size: (@baseFontSize_1 * 2.5 / 2) * 1px;
+    }
+    [data-dpr="2.75"] & {
+      font-size: (@baseFontSize_1 * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+      font-size: (@baseFontSize_1 / 2 * 3) * 1px;
+    }
+    [data-dpr="4"] & {
+      font-size: @baseFontSize_1 * 2px;
+    }
+  } 
+  .gt-rightIcon{
+    color: @specFontColor;
+  }
+}

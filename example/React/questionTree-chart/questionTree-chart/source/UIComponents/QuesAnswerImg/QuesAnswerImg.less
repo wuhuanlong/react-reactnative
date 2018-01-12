@@ -1,0 +1,42 @@
+@import '../../resource/style/variable.less';
+
+.align-right {
+  text-align: right;
+}
+.aligh-center{
+  text-align: center;
+}
+
+.gt-answer-img{
+    display: inline-block;
+}
+
+.gt-answer-answer {
+  font-size: @baseFontSize;
+  box-shadow: 0 2px 2px #d8d8d8;
+  padding: 28/75rem 20/75rem;
+  width: 3.4rem;
+  img {
+    margin: 10px;
+    height: 1.2rem;
+  }
+  text-align: center;
+  background: white;
+  margin: 15px;
+  border-radius: 20px;
+  display: inline-block;
+  p {
+    margin-bottom: 25px;
+    color: @specFontColor; 
+  }
+  &:active {
+    background-color: @activeBackgroundColor;
+  }
+  &.selected {
+    background-color: @activeBackgroundColor;
+  }
+}
+
+.gt-unVisable {
+  visibility: hidden;
+}

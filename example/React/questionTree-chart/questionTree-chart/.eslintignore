@@ -1,0 +1,3 @@
+build/*.js
+source/plugin/*.js
+source/utils/encrypt.js

@@ -1,0 +1,111 @@
+@import './variable.less';
+
+.gt-flex{
+    display: flex;
+    display: -webkit-flex;
+    display: -webkit-box;
+}
+.gt-flex-item{
+    flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex:1; 
+} 
+.gt-container{
+    background-color: @commonBackground;
+    padding: 30px 30px;
+} 
+
+.gt-show {
+  visibility: visible;
+}
+
+.gt-hide {
+  visibility: hidden;
+}
+
+.gt-visibleless{
+    visibility: hidden;
+}
+
+.gt-visible{
+    visibility: visible; 
+}
+
+.gt-result-content {
+    padding: 25px;
+    background-color: @commonBackground;
+
+    @media screen and (orientation: portrait) {
+        /*竖屏 css*/ 
+        img{
+            width: 100%;
+            margin-bottom: 100px;
+        }
+    }
+
+    @media screen and (orientation: landscape) {
+        /*横屏 css*/
+        img{
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 100px;
+        }
+    }
+    
+}
+
+.gt-result-footer{
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: @baseFontSize;
+    color: @specFontColor;
+    border-top: 1px solid #e5e5e5;
+    p{
+        flex: 1;
+        &:first-child{
+            border-right: 1px solid #e5e5e5;
+        }
+        &:active{
+            opacity: 0.3;
+        }
+    }
+    padding: 25/75rem;
+}
+ 
+/*  animation  start   !-- wuhl@thinkive.com 2017-07-07 17:59:00*/
+.gt-answer-enter {
+    position: absolute; 
+    padding: 0;
+    left: 30px;
+    right: 30px;
+    margin-top: 30px;
+    opacity: 0.01;
+    transition-delay: .3s;
+    transform: translate(-100%, 0);
+    transition: all .5s ease;
+} 
+.gt-answer-enter.gt-answer-enter-active {
+    -webkit-transform: translate(0px, 0);
+    transform: translate(0px, 0);  
+    opacity: 1;
+}  
+.gt-answer-leave {
+    opacity: 1;
+    transform: translate(0px, 0);
+    transition: all .3s ease;
+} 
+.gt-answer-leave.gt-answer-leave-active {
+    opacity: 0.01;
+    position: '';
+    left: '';
+    right: '';
+    margin-top: '';
+}  
+/* animation end  */
+
+

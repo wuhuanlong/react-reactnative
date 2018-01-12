@@ -1,0 +1,31 @@
+@import '../../resource/style/variable.less';
+
+.gt-btn__next{
+    margin-top: 50px;
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px;
+    font-size: @baseFontSize;
+    color: @specFontColor;
+    [data-dpr="2"] & {
+        font-size: @baseFontSize_1 * 1px;
+        padding: 20px * 1px;
+    }
+    [data-dpr="2.5"] & {
+        font-size: (@baseFontSize_1 * 2.5 / 2) * 1px;
+        padding: 20px * 2.5 / 2 * 1px;
+    }
+    [data-dpr="2.75"] & {
+        font-size: (@baseFontSize_1 * 2.75 / 2) * 1px;
+        padding: 20px * 2.75 / 2 * 1px;
+    }
+    [data-dpr="3"] & {
+        font-size: (@baseFontSize_1 / 2 * 3) * 1px;
+        padding: 20px * 3 / 2 * 1px;
+    }
+    [data-dpr="4"] & {
+        font-size: @baseFontSize_1 * 2px;
+        padding: 20px * 2 * 1px;
+    }
+}

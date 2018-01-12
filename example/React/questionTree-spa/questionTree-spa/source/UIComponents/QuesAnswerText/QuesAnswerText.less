@@ -1,0 +1,30 @@
+@import '../../resource/style/variable.less';
+ 
+  /*竖屏 css*/
+.gt-answer-text {  
+    background: white;
+    border-radius: 20px;
+    color: @specFontColor;
+    font-size: @baseFontSize;
+    width: 100%;
+    display: inline-block;
+    text-align: left; 
+    img.selected{
+        right: 50px;
+        width: @baseFontSize
+    } 
+}
+.answer{
+    border-bottom: 1px solid @borderColor;
+    padding: 25/75rem;
+    border-bottom: 1/75rem solid @borderColor;
+    &:last-child{
+        border-bottom: 0 solid transparent;
+    }
+    &:active{
+        background-color: @activeBackgroundColor;
+    }
+    p:first-child{
+        padding-right: 10px;
+    }
+} 
